@@ -1,0 +1,7 @@
+name: notopia-githubio
+
+services:
+  kroki:
+    image: yuzutech/kroki
+    ports:
+      - 8001:8001
