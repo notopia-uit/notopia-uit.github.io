@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import { configureDiagramsPlugin } from "vitepress-plugin-diagrams";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,12 +10,6 @@ export default defineConfig({
       light: "catppuccin-latte",
       dark: "catppuccin-mocha",
     },
-    config: (md) => {
-      configureDiagramsPlugin(md, {
-        diagramsDir: "public/diagrams",
-        krokiServerUrl: process.env.KROKI_SERVER_URL,
-      });
-    },
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -24,14 +17,6 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Notopia", link: "/notopia" },
     ],
-
-    // sidebar: [
-    //   {
-    //     text: "Docs",
-    //     link: "/docs",
-    //     items: [{ text: "Class", link: "/docs/class" }],
-    //   },
-    // ],
 
     socialLinks: [
       {

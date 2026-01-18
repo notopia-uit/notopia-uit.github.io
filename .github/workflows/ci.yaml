@@ -23,43 +23,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    services:
-      kroki:
-        image: yuzutech/kroki
-        ports:
-          - 8001:8001
-    env:
-      KROKI_SERVER_URL: http://127.0.0.1:8001
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           cache: pnpm
           node-version-file: package.json
-      - name: Restore public cache
-        uses: actions/cache/restore@v4
-        with:
-          path: public
-          key: ${{ runner.os }}-public-${{ hashFiles('public/**') }}
-          restore-keys: |
-            ${{ runner.os }}-public-
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+
       - name: Build with VitePress
-        run: npm run docs:build
+        run: npm run build
       - name: Build again
-        run: npm run docs:build
-      - name: Save public cache
-        uses: actions/cache/save@v4
-        with:
-          path: public
-          key: ${{ runner.os }}-public-${{ hashFiles('public/**') }}
+
+        run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
