@@ -16,7 +16,7 @@ export default defineConfig({
     nav: [
       {
         text: "Notopia",
-        link: "/notopia",
+        link: "/notopia/",
         target: "_self",
         rel: "noopener",
       },

@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Notopia
-      link: /notopia
+      link: /notopia/
       target: _self
       rel: noopener
 ---
