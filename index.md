@@ -3,22 +3,10 @@
 layout: home
 
 hero:
-  name: "Notopia"
-  text: "Utopia of Notes"
-  tagline: My great project tagline
+  name: Notopia
+  text: Utopia of Notes
   actions:
     - theme: brand
-      text: Docs
-      link: /docs
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      text: Notopia
+      link: /notopia
 ---
