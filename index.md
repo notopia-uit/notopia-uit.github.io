@@ -10,4 +10,5 @@ hero:
       text: Notopia
       link: /notopia
       target: _self
+      rel: noopener
 ---

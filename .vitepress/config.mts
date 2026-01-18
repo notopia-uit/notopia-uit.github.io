@@ -13,7 +13,14 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "Notopia", link: "/notopia", target: "_self" }],
+    nav: [
+      {
+        text: "Notopia",
+        link: "/notopia",
+        target: "_self",
+        rel: "noopener",
+      },
+    ],
 
     socialLinks: [
       {
