@@ -9,4 +9,5 @@ hero:
     - theme: brand
       text: Notopia
       link: /notopia
+      target: _self
 ---
